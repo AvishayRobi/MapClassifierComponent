@@ -48,6 +48,9 @@ namespace MapClassifierComponent.InputTypes
         case eInputType.HttpExtractor:
           extractor = new HttpExtractor(this.feedUrl);
           break;
+        case eInputType.Isracard;
+          extractor = new IsracardExtractor(this.feedUrl);
+          break;
       }
 
       return extractor;
