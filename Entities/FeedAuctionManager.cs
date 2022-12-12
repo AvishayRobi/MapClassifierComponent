@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using OFInfrastructure.Auctions.Model;
 using MapClassifierComponent.Model;
+using OFInfrastructure.Auctions.Model;
 using WallaShops.Utils;
 using WallaShops.Objects;
 
