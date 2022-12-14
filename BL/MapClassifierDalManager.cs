@@ -58,16 +58,14 @@ namespace MapClassifierComponent.BL
     {
       int feedID = WSStringUtils.ToInt(dr["feed_id"]);
       SqlDataReader reader = this.dal.GetFeedMapReader(feedID);
-      FeedMap map = null;
 
       using (reader)
       {
-        map = new FeedMap(reader);
+        return new FeedMap(reader)
+        {
+          ServiceMap = WSStringUtils.ToString(dr["service_map"])
+        };
       }
-
-      map.ServiceMap = WSStringUtils.ToString(dr["service_map"]);
-
-      return map;
     }
 
     private IEnumerable<string> extractEmails(object dataRow)
