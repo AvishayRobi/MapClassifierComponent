@@ -12,7 +12,7 @@ using MapClassifierComponent.Mapping.Model;
 using OFInfrastructure.Auctions.Model;
 using OFInfrastructure.Logs;
 using OFInfrastructure.Logs.Model;
-using WBambaShops.Utils;
+using WallaShops.Utils;
 
 namespace MapClassifierComponent
 {
