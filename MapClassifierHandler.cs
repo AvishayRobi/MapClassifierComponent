@@ -27,8 +27,8 @@ namespace MapClassifierComponent
     #region Ctor
     public MapClassifierHandler()
     {
-      this.dalManager = DataAccessLayer.GetDalManagerObj();
-      this.fileManager = DataAccessLayer.GetFileManagerObj();
+      this.dalManager = DataAccessFactory.GetDalManagerObj();
+      this.fileManager = DataAccessFactory.GetFileManagerObj();
       this.logManager = new LogManager();
     }
     #endregion
