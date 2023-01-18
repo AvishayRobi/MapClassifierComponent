@@ -12,23 +12,23 @@ using MapClassifierComponent.Mapping.Model;
 using OFInfrastructure.Auctions.Model;
 using OFInfrastructure.Logs;
 using OFInfrastructure.Logs.Model;
-using WallaShops.Utils;
+using WBambaShops.Utils;
 
 namespace MapClassifierComponent
 {
   public class MapClassifierHandler
   {
     #region Data Members
-    private MapClassifierDalManager dalManager { get; }
-    private MapClassifierFileManager fileManager { get; }
+    private IDalManager dalManager { get; }
+    private IFileManager fileManager { get; }
     private LogManager logManager { get; }
     #endregion
 
     #region Ctor
     public MapClassifierHandler()
     {
-      this.dalManager = new MapClassifierDalManager();
-      this.fileManager = new MapClassifierFileManager();
+      this.dalManager = DataAccessLayer.GetDalManagerObj();
+      this.fileManager = DataAccessLayer.GetFileManagerObj();
       this.logManager = new LogManager();
     }
     #endregion
